@@ -9,9 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 //iniciando database
-mongoose.connect(
-    'mongodb://localhost:27017/nodeapi', { useNewUrlParser: true }
-);
+mongoose.connect('mongodb+srv://deploy:poi098zxc123@cluster0-rcnxn.mongodb.net/test?retryWrites=true&w=majority', { dbName: 'nodeapi' });
 requireDir('./src/models');
 
 //const Product = mongoose.model('Product');
